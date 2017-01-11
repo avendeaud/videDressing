@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dess3</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1><%= link_to "Vide Dressing", root_path %></h1>
+  <% if current_user %>
+  <%= link_to "Deconnexion", destroy_session_path %>
+  <% else %>
+  <%= link_to "Connexion", new_session_path %>
+	<%= link_to "Inscription", new_user_path %>
+  <% end %>
+
+    <%= yield %>
+  </body>
+</html>
