@@ -1,29 +1,38 @@
-<p id="notice"><%= notice %></p>
+<section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Utilisateur : </strong>
-  <%= @ad.user.first_name %> <%= @ad.user.last_name %>
-</p>
+                    <p>
+                      <strong>Utilisateur : </strong>
+                      <%= @ad.user.first_name %> <%= @ad.user.last_name %>
+                    </p>
 
-<p>
-  <strong>Nom de l'article : </strong>
-  <%= @ad.name %>
-</p>
+                    <p>
+                      <strong>Titre de l'article : </strong>
+                      <%= @ad.name %>
+                    </p>
 
-<p>
-  <strong>Description de l'article : </strong>
-  <%= @ad.description %>
-</p>
+                    <p>
+                      <strong>Description de l'article : </strong>
+                      <%= @ad.description %>
+                    </p>
 
-<p>
-  <strong>Prix : </strong>
-  <%= @ad.price %>
-</p>
+                    <p>
+                      <strong>Prix : </strong>
+                      <%= @ad.price %>
+                    </p>
 
-<p>
-  <strong>Lieu de rencontre : </strong>
-  <%= @ad.address %>
-</p>
+                    <p>
+                      <strong>Lieu de rencontre : </strong>
+                      <%= @ad.address %>
+                    </p>
 
-<%= link_to 'Edit', edit_ad_path(@ad) %> |
-<%= link_to 'Back', ads_path %>
+                    <%= link_to 'Edit', edit_ad_path(@ad) %> |
+                    <%= link_to 'Back', ads_path %>
+
+                  </div>
+                </div>
+              </div>
+</section>

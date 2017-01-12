@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
   resources :ads
-  resources :users, except: :new
+  
   root to: "ads#index"
 
+  get '/users/edit' => 'users#edit', as: :edit_user
+
+
+
+  get '/users/update' => 'users#update'
+
+  get '/users/destroy' => 'users#destroy'
+
+  resources :users, except: [:new, :index, :edit, :update, :destroy]
 
    get '/signup' => 'users#new', as: :new_user
    

@@ -1,22 +1,81 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Dess3</title>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Vide de dressing</title>    
+
+<!--//////////////////////// --> 
+<!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!--//////////////////////// --> 
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <h1><%= link_to "Vide Dressing", root_path %></h1>
-  <% if current_user %>
-  <%= link_to "Deconnexion", destroy_session_path %>
-  <% else %>
-  <%= link_to "Connexion", new_session_path %>
-	<%= link_to "Inscription", new_user_path %>
-  <% end %>
+  <body id="page-top" class="index">
+    <!--//////////////////////// --> 
+       <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                
 
+                <!--//////////////////////// --> 
+                <h1 class="navbar-brand" href="#page-top"><%= link_to "Vide Dressing", root_path %></h1>
+            </div>
+                <!--//////////////////////// --> 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <% if current_user %>
+                    <li class="page-scroll active">
+                        <%= link_to "Deconnexion", destroy_session_path %>
+                    </li>
+                    <% else %>
+                    <li class="page-scroll active">
+                        <%= link_to "Connexion", new_session_path %>
+                    </li>
+                    <li class="page-scroll">
+                        <%= link_to "Inscription", new_user_path %>
+                    </li>
+                    <% end %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+       </nav>
     <%= yield %>
+
   </body>
 </html>
+
+
+
+
+
+
+
+
+

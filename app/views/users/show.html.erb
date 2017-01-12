@@ -1,24 +1,36 @@
-<p id="notice"><%= notice %></p>
+<section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+					<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+					<h2>Info</h2>
+					<hr class="star-primary">
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+				</div>
+			</div>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+					<p>
+					  <strong>Prénom : </strong>
+					  <%= @user.first_name %>
+					</p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+					<p>
+					  <strong>Nom : </strong>
+					  <%= @user.last_name %>
+					</p>
+
+					<p>
+					  <strong>E-mail : </strong>
+					  <%= @user.email %>
+					</p>
+					<% if current_user%>
+					<%= link_to 'Edit', edit_user_path %> 
+					<% end %>
+					<%= link_to 'Back', root_path %>
+
+				
+		</div>
+</section>
+
